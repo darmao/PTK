@@ -90,7 +90,7 @@ def getEncryKey(ptk):
     
 def check_sum(s):
     """
-    UDP的校验和
+    计算UDP的校验和
     """
     s=str(s)
     if s.__len__()%4 !=0:
@@ -127,7 +127,7 @@ def crc32(v):
     s3=temp[2:4]
     s2=temp[4:6]
     s1=temp[6:8]
-    return s1+s2+s3+s4
+    return s1+s2+s3+s4　#这里注意字节序的问题
 
 def udp_check():
     fake_header = 'c0a82a53c0a82a010011002b'  # srcip_4/dstip_4/00/11/len_2(udpheader+data)
