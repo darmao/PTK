@@ -90,7 +90,7 @@ def getEncryKey(ptk):
     
 def check_sum(s):
     """
-    计算UDP的校验和
+    UDP的校验和
     """
     s=str(s)
     if s.__len__()%4 !=0:
@@ -117,7 +117,7 @@ def check_sum(s):
 
 def crc32(v):
     """
-    计算CRC校验
+    CRC校验
     """
     v=v.decode('hex')
     temp='%x' % (binascii.crc32(v) & 0xffffffff)
